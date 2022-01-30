@@ -5,8 +5,8 @@ const userSchema = new mongoose.Schema({
   email: String,
   password: String,
   roleId: { type: mongoose.Schema.ObjectId, ref: "roles" },
-  dbStatus: Boolean,
   registerDate: { type: Date, default: Date.now },
+  dbStatus: { type: Boolean, default: true }
 });
 
 const user = mongoose.model("users", userSchema);

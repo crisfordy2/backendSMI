@@ -7,7 +7,7 @@ const imageSchema = new mongoose.Schema({
   visibility: Boolean,
   userId: { type: mongoose.Schema.ObjectId, ref: "users" },
   registerDate: { type: Date, default: Date.now },
-  dbStatus: Boolean,
+  dbStatus: { type: Boolean, default: true }
 });
 
 const image = mongoose.model("images", imageSchema);
